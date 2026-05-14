@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const FIXATION_TIME = 500;
   const WORD_TIME = 700;
   const BLANK_TIME = 300;
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyT7bO-0dGHDmEexYe7LdfDZn-WGKByPgIBP0jn2aLQNJ30GeX373dJlltoff8GH0zCwg/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzHWLrJ_YxWYxDt0crv20qe8glNPJEs3xPJhKypcu-2BEI_NWo-c7aIWv3kaSxdrgtHMA/exec';
 
   const deviceType = isMobileDevice() ? 'mobile' : 'desktop';
 
