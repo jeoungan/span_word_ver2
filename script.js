@@ -171,20 +171,16 @@ document.addEventListener('DOMContentLoaded', () => {
     btns.download.textContent = '전송 중...';
 
     try {
-      const response = await fetch(SCRIPT_URL, {
+      await fetch(SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors',
         body: JSON.stringify({ rows: results }),
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
+          'Content-Type': 'text/plain',
         },
       });
-      const data = await response.json();
 
-      if (data.status !== 'success') {
-        throw new Error(data.message || 'Sheet save failed');
-      }
-
-      alert('결과 전송이 완료되었습니다.');
+      alert('결과 전송 요청이 완료되었습니다. Google Sheet를 확인해 주세요.');
       btns.download.textContent = '전송 완료';
     } catch (error) {
       console.error(error);
