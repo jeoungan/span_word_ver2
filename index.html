@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>단어 단기 기억 과제</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="start-screen" class="screen active">
+      <p class="eyebrow">simple memory span task ver2</p>
+      <h1>단어 단기 기억 과제</h1>
+      <img class="example-image" src="example-flow.svg" alt="단어 기억 과제 예시">
+      <div class="instructions">
+        <strong>과제 방법</strong>
+        <ol>
+          <li>화면 중앙에 단어가 하나씩 나타납니다.</li>
+          <li>한 시행에는 단어 4개 또는 6개가 무작위 조건으로 제시됩니다.</li>
+          <li>단어가 모두 지나간 뒤 1초 또는 4초 동안 기억을 유지합니다.</li>
+          <li>기억나는 단어를 순서대로 띄어쓰기로 입력합니다.</li>
+          <li>만약 앞 단어가 기억나지 않고, 뒷 단어만 기억난다면 숫자 00을 자리에 맞춰 넣어주세요.</li>
+          <li>연습 시행은 4번, 본 시행은 16번 진행합니다.</li>
+        </ol>
+      </div>
+      <label for="participant-id">참가자 ID</label>
+      <input id="participant-id" type="text" placeholder="예: S01" autocomplete="off">
+      <button id="start-btn" class="primary-btn">시작</button>
+    </section>
+
+    <section id="fixation-screen" class="screen stage-screen">
+      <div class="fixation">+</div>
+    </section>
+
+    <section id="word-screen" class="screen stage-screen">
+      <div id="word-display"></div>
+    </section>
+
+    <section id="retention-screen" class="screen stage-screen">
+      <div class="blank-mark"></div>
+    </section>
+
+    <section id="recall-screen" class="screen">
+      <p id="trial-label" class="eyebrow"></p>
+      <h2>기억한 단어를 입력하세요</h2>
+      <input id="answer-input" type="text" placeholder="예: 사과 나무 바다" autocomplete="off">
+      <button id="submit-btn" class="primary-btn">응답 저장</button>
+    </section>
+
+    <section id="result-screen" class="screen">
+      <h2 id="result-title"></h2>
+      <p id="result-detail"></p>
+      <p id="progress-text" class="progress"></p>
+      <button id="next-btn" class="primary-btn">다음 시행</button>
+    </section>
+
+    <section id="end-screen" class="screen">
+      <h2>과제가 끝났습니다</h2>
+      <p>수고하셨습니다. 아래 버튼을 눌러 결과를 전송해 주세요.</p>
+      <button id="download-btn" class="primary-btn">결과 보내기</button>
+      <button id="restart-btn" class="secondary-btn">처음부터 다시</button>
+    </section>
+  </main>
+
+  <script src="memory-core.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

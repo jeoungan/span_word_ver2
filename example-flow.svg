@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
+  <title id="title">응답 예시</title>
+  <desc id="desc">앞 단어가 기억나지 않을 때 00을 자리에 맞춰 넣는 응답 예시</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1f3754" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="920" height="220" rx="26" fill="#f7fbff"/>
+  <rect x="38" y="54" width="844" height="126" rx="20" fill="#ffffff" stroke="#79aefb" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="374" y="28" width="172" height="52" rx="12" fill="#2f7df6"/>
+  <g font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" text-anchor="middle">
+    <text x="460" y="62" fill="#ffffff" font-size="26" font-weight="900">응답 예시</text>
+    <text x="460" y="136" fill="#0b1b35" font-size="42" font-weight="900">
+      응답: 사과 <tspan fill="#2f7df6">00</tspan> 바다 우산
+    </text>
+  </g>
+</svg>
